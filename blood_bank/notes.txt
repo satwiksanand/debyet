@@ -1,0 +1,15 @@
+//todo we have to solve the issue of image rendering tommorow as well as the login issue associated with the flag key array of session variable.
+
+
+always start your site with the login page
+or else solve the coditional issue.
+
+give options to change the profile settings 
+
+and give a options to log out.
+
+ok final !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+
+give a log out button
+
+and a option to change passwords(optional).
