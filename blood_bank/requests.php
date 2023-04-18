@@ -3,9 +3,15 @@ session_start();
 require('db.php');
 
 $insert=false;
+/*
+? the flag2 variable ensures that the data table is shown only when the admin selects the type and city.
+*/
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if($_SESSION['flag']==true){
     $bgp = $_POST['type'];
     $city = $_POST['city'];
+    $flag2=true;
     //initializing a variable that will be used in displaying the result below.
     //we will check if the email and password is present in the database or not.
     //we will run a query and will fetch the email and password column from the table of user data.
@@ -25,6 +31,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>";
     }
 }
+else{
+    echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+        <strong>SORRY! </strong> Login first!
+        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+        </div>";
+}
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +58,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script defer src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script defer src="./js/script.js"></script>
     <title>Donations</title>
 </head>
 
@@ -151,8 +169,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2>Donations</h2>
             <hr class="line">
         </div>
-        <form action="/projects/blood_bank/requests.php" method="post">
         <div class="container">
+            <form action="/projects/blood_bank/requests.php" method="post">
             <div class="row">
                 <div class="col-lg-5">
                     <select name="type" id="">
@@ -213,6 +231,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 
             </div>
+            </form>
             <?php
                 if($insert==true){
                     for ($i=0; $i < $num; $i++) { 
@@ -250,83 +269,56 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 "</div>";
                 }
             ?>
-            <!-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="type">
-                                <h2>B</h2>
-                            </div>
-                        </div>
-                        <div class="data col-lg-6">
-                            <h4>Name: Amir Singh</h4>
-                            <h4>Hospital: New Hospitals</h4>
-                            <h4>City: Kolkata</h4>
-                        </div>
-                        <div class="col-lg-3">
-                            <button onclick= "window.location.href = 'donator.php';">Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="type">
-                                <h2>AB+</h2>
-                            </div>
-                        </div>
-                        <div class="data col-lg-6">
-                            <h4>Name: Ahmed Mohamed</h4>
-                            <h4>Hospital: Andalusia Hospitals</h4>
-                            <h4>City: Cairo</h4>
-                        </div>
-                        <div class="col-lg-3">
-                            <button onclick= "window.location.href = 'donator.php';">Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="type">
-                                <h2>O</h2>
-                            </div>
-                        </div>
-                        <div class="data col-lg-6">
-                            <h4>Name: Ahmed Mohamed</h4>
-                            <h4>Hospital: Andalusia Hospitals</h4>
-                            <h4>City: Giza</h4>
-                        </div>
-                        <div class="col-lg-3">
-                            <button onclick= "window.location.href = 'donator.php';">Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="type">
-                                <h2>AB+</h2>
-                            </div>
-                        </div>
-                        <div class="data col-lg-6">
-                            <h4>Name: Ahmed Mohamed</h4>
-                            <h4>Hospital: Andalusia Hospitals</h4>
-                            <h4>City: Cairo</h4>
-                        </div>
-                        <div class="col-lg-3">
-                            <button onclick= "window.location.href = 'donator.php';">Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+            
+            <div class="container">
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>City</th>
+                    <th>Age</th>
+                    <th>E-mail</th>
+                    <th>Password</th>
+                    <th>Blood available</th>
+                    <th>Contact</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                $query = "SELECT * FROM `users`";
+                $query_run = mysqli_query($connection, $query);
 
+                if (mysqli_num_rows($query_run) > 0) {
+                    foreach ($query_run as $donor) {
+                ?>
+                        <tr>
+                            <td><?= $donor['first_name']; ?></td>
+                            <td><?= $donor['last_name']; ?></td>
+                            <td><?= $donor['city']; ?></td>
+                            <td><?= $donor['age']; ?></td>
+                            <td><?= $donor['email']; ?></td>
+                            <td><?= $donor['password']; ?></td>
+                            <td><?= $donor['bgp']; ?></td>
+                            <td><?= $donor['contact']; ?></td>
+                            <td>
+                                <a href="donor-view.php?id=<?= $donor['email']; ?>" class="btn btn-info btn-sm">View</a>
+                                <a href="donor-edit.php?id=<?= $donor['email']; ?>" class="btn btn-success btn-sm">Edit</a>
+                                <form action="code.php" method="POST" class="d-inline">
+                                    <button type="submit" name="delete_donor" value="<?= $donor['email']; ?>" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                <?php
+                    }
+                } else {
+                    echo "<h5> No Record Found </h5>";
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
             <div class="page-num">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center">
@@ -349,7 +341,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </nav>
                 </div>
         </div>
-        </form>
+        
     </section>
     <!-- Requests End -->
 

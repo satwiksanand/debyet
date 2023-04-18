@@ -160,16 +160,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 <img src="Pictures/logo.png" alt="">
                 <form action="/projects/blood_bank/profile.php" method="post">
                 <?php
-                    echo "<input type='text' placeholder=" . $_SESSION['fn'] . " required name='fn'>";
+                    echo "<input type='text' value=" . $_SESSION['fn'] . " required name='fn'>";
                 ?>
                 <?php
-                    echo "<input type='text' placeholder=" . $_SESSION['ln'] . " required name='ln'>";
+                    echo "<input type='text' value=" . $_SESSION['ln'] . " required name='ln'>";
                 ?>
                 <?php
-                    echo "<input type='number' placeholder=" . $_SESSION['age'] . " required name='age'>";
+                    echo "<input type='number' value=" . $_SESSION['age'] . " required name='age'>";
                 ?>
                 <?php
-                    echo "<select name='type' id='type' placeholder=" . $_SESSION['bgp'] . " required >
+                    echo "<select name='type' id='type' value=" . $_SESSION['bgp'] . " required >
                         <option value='Blood Type' disabled>Blood Type</option>
                         <option value='AB+'>A+</option>
                         <option value='AB+'>A-</option>
@@ -181,7 +181,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     </select>";
                 ?>
                 <?php
-                    echo "<select name='city' id='Gov' required placeholder=" . $_SESSION['city'] . ">
+                    echo "<select name='city' id='Gov' required value=" . $_SESSION['city'] . ">
                         <option value='Governorate' disabled>Governorate</option>
                         <option value='Alexandria'>Patna</option>
                         <option value='Cairo'>New Delhi</option>
@@ -191,13 +191,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     </select>";
                 ?>
                 <?php
-                    echo "<input type='phone' placeholder=" . $_SESSION['contact'] . " required name='contact'>";
+                    echo "<input type='phone' value=" . $_SESSION['contact'] . " required name='contact'>";
                 ?>
                 <?php
-                    echo "<input type='email' placeholder='new Email' required name='email'>";
+                    echo "<input type='email' value='new Email' required name='email'>";
                 ?>
                <?php
-                    echo "<input type='password' placeholder='new password' required name='pass'>";
+                    echo "<input type='password' value='new password' required name='pass'>";
                 ?>
                     <div class="reg-group">
                         <input class="check" type="checkbox" required="" style="height: auto; display:inline; margin: 0 auto;">Agree on terms and conditions<br>

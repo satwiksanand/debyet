@@ -116,7 +116,7 @@ require('db.php');
     ! image not loading here.
     */ -->
     <section id="header">
-        <img src="./Pictures/bg4.jpg" width = 100% height="100%" alt="home image"> 
+        <img src="./Pictures/header2.jpg" width ="100%" height="100%" alt="home-image"> 
         <!-- <div class="container">-->
             <!-- <h1>We are seeking for a better community health.</h1>
             <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora repellat inventore nemo repudiandae
