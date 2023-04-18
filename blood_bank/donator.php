@@ -170,27 +170,11 @@ require('db.php');
             </div>
             </div>
             <div class="details-container">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, ipsum reiciendis deleniti dolor quia
-                    voluptate itaque vero doloremque labore consequuntur. Excepturi a neque doloremque. Vitae debitis
-                    sit explicabo tenetur est.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur cumque, hic enim nostrum assumenda
-                    esse quisquam error doloribus dolorem dolor commodi. Ratione eaque voluptate voluptatibus mollitia
-                    doloremque suscipit perferendis earum.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. In impedit mollitia similique tenetur,
-                    excepturi soluta culpa perferendis magni perspiciatis ullam porro rerum amet inventore voluptates
-                    ad, minima facere quam asperiores.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet delectus laudantium aut recusandae
-                    quo aliquid cum magni. Praesentium, suscipit dolor reprehenderit unde natus laboriosam? Provident
-                    rem officiis et impedit fugit?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quasi ullam nemo neque aut
-                    reprehenderit! Animi adipisci omnis eius iure ullam, dolorum odit ut nostrum atque repellat in earum
-                    velit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum rem natus sapiente, dolores, ratione
-                    ducimus sequi iusto mollitia porro nobis eligendi ipsum, quibusdam minus beatae provident totam enim
-                    est et.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam, debitis veritatis libero
-                    ipsum odio, architecto neque quibusdam cupiditate iste distinctio dignissimos temporibus! Harum eius
-                    possimus tenetur tempora placeat tempore?
+                <p>Blood donation is a voluntary procedure that can help save lives. Donating blood can help people with many health conditions, such as those who have internal or external bleeding due to an injury, have sickle cell disease or another illness that affects the blood, are undergoing cancer treatment, are undergoing surgery, such as cardiovascular or orthopedic surgery, have an inherited blood disorder, are undergoing a transplant, or need treatments involving plasma or other blood products1.
+
+Donating blood has benefits for your emotional and physical health. According to a report by the Mental Health Foundation, helping others can reduce stress, improve your emotional well-being, benefit your physical health, help get rid of negative feelings, provide a sense of belonging and reduce isolation2.
+
+Donating blood replenishes the body’s ability to perform needed tasks such as carrying oxygen from our lungs to the rest of our bodies and helping blood to clot when injuries occur3. Regular blood donation by a sufficient number of healthy people is needed to ensure that blood will always be available whenever and wherever it is needed
                 </p>
             </div>
             <iframe
@@ -207,9 +191,7 @@ require('db.php');
                 <div class="col-md-5">
                     <div class="foot-info">
                         <img src="Pictures/logo.png" alt="">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos ut sit natus earum ea cum
-                            doloremque fugit. Sit non ex suscipit fugiat molestias, ipsa rerum tempore voluptates
-                            adipisci rem cum?</p>
+                        <p>We Are India’s Largest Youth Run Initiative Working In The Field Of Blood Donation Trying To Make India Blood Sufficient.</p>
                     </div>
                 </div>
                 <div class="col-md-3">

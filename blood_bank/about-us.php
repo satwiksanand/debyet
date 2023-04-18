@@ -129,15 +129,11 @@ require('db.php');
     <section id="who">
         <div class="container">
                 <img src="Pictures/logo.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui eius asperiores, animi adipisci quia eum beatae incidunt, laborum velit quibusdam debitis totam, et reiciendis ad? Commodi cupiditate velit vero?
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum aspernatur est magnam, nesciunt culpa provident sit nobis molestias possimus? A optio dolores dolorum, odio nam est ducimus quis quisquam vero.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae modi veritatis iste provident quis consectetur animi soluta, rerum dicta dolorem suscipit facere quas, porro, pariatur tempora consequuntur ad accusamus. Voluptatem?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui eius asperiores, animi adipisci quia eum beatae incidunt, laborum velit quibusdam debitis totam, et reiciendis ad? Commodi cupiditate velit vero?
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum aspernatur est magnam, nesciunt culpa provident sit nobis molestias possimus? A optio dolores dolorum, odio nam est ducimus quis quisquam vero.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae modi veritatis iste provident quis consectetur animi soluta, rerum dicta dolorem suscipit facere quas, porro, pariatur tempora consequuntur ad accusamus. Voluptatem?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere qui eius asperiores, animi adipisci quia eum beatae incidunt, laborum velit quibusdam debitis totam, et reiciendis ad? Commodi cupiditate velit vero?
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum aspernatur est magnam, nesciunt culpa provident sit nobis molestias possimus? A optio dolores dolorum, odio nam est ducimus quis quisquam vero.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae modi veritatis iste provident quis consectetur animi soluta, rerum dicta dolorem suscipit facere quas, porro, pariatur tempora consequuntur ad accusamus. Voluptatem?
+                <p>Blood donation is a voluntary procedure that can help save lives. Donating blood can help people with many health conditions, such as those who have internal or external bleeding due to an injury, have sickle cell disease or another illness that affects the blood, are undergoing cancer treatment, are undergoing surgery, such as cardiovascular or orthopedic surgery, have an inherited blood disorder, are undergoing a transplant, or need treatments involving plasma or other blood products1.
+
+Donating blood has benefits for your emotional and physical health. According to a report by the Mental Health Foundation, helping others can reduce stress, improve your emotional well-being, benefit your physical health, help get rid of negative feelings, provide a sense of belonging and reduce isolation2.
+
+Donating blood replenishes the body’s ability to perform needed tasks such as carrying oxygen from our lungs to the rest of our bodies and helping blood to clot when injuries occur3. Regular blood donation by a sufficient number of healthy people is needed to ensure that blood will always be available whenever and wherever it is needed
                 </p>
         </div>
     </section>
@@ -150,9 +146,7 @@ require('db.php');
                 <div class="col-md-5">
                     <div class="foot-info">
                         <img src="Pictures/logo.png" alt="">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos ut sit natus earum ea cum
-                            doloremque fugit. Sit non ex suscipit fugiat molestias, ipsa rerum tempore voluptates
-                            adipisci rem cum?</p>
+                        <p>We Are India’s Largest Youth Run Initiative Working In The Field Of Blood Donation Trying To Make India Blood Sufficient.</p>
                     </div>
                 </div>
                 <div class="col-md-3">

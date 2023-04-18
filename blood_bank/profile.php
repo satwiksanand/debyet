@@ -213,9 +213,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 <div class="col-md-5">
                     <div class="foot-info">
                         <img src="Pictures/logo.png" alt="">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos ut sit natus earum ea cum
-                            doloremque fugit. Sit non ex suscipit fugiat molestias, ipsa rerum tempore voluptates
-                            adipisci rem cum?</p>
+                        <p>We Are India’s Largest Youth Run Initiative Working In The Field Of Blood Donation Trying To Make India Blood Sufficient.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
